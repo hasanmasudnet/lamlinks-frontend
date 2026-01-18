@@ -46,7 +46,7 @@ export function AdvancedJobTable() {
   const [expandedRow, setExpandedRow] = useState<string | null>(null);
   const [showColumnConfig, setShowColumnConfig] = useState(false);
   const [selectedJob, setSelectedJob] = useState<Job | null>(null);
-  const [density, setDensity] = useState<'compact' | 'comfortable' | 'spacious'>('comfortable');
+  const [density, setDensity] = useState<'compact' | 'comfortable' | 'spacious'>('compact');
   
   // Pagination and filtering states
   const [currentPage, setCurrentPage] = useState(1);
@@ -60,16 +60,16 @@ export function AdvancedJobTable() {
     { id: 'job', label: 'Job', visible: true, sticky: true, width: '220px', category: 'core' },
     { id: 'bandingLine', label: 'Banding Line', visible: true, width: '130px', category: 'core' },
     { id: 'owner', label: 'Owner', visible: true, width: '150px', category: 'core' },
+    { id: 'priority', label: 'Priority', visible: true, width: '100px', category: 'core' },
     { id: 'schedule', label: 'Schedule', visible: true, width: '180px', category: 'scheduling' },
     { id: 'frequency', label: 'Frequency', visible: true, width: '120px', category: 'scheduling' },
-    { id: 'note', label: 'Note', visible: true, width: '200px', category: 'details' },
     { id: 'cutoff', label: 'Cutoff', visible: true, width: '140px', category: 'scheduling' },
-    { id: 'estDur', label: 'Est. Dur.', visible: true, width: '100px', category: 'status' },
-    { id: 'estComp', label: 'Est. Comp.', visible: true, width: '120px', category: 'status' },
-    { id: 'lastCheckIn', label: 'Last Check In', visible: true, width: '150px', category: 'status' },
-    { id: 'priority', label: 'Priority', visible: true, width: '100px', category: 'core' },
-    { id: 'lastLogMessage', label: 'Last Log Message', visible: true, width: '250px', category: 'details' },
-    { id: 'alerts', label: 'Alerts', visible: true, width: '200px', category: 'status' },
+    { id: 'note', label: 'Note', visible: false, width: '200px', category: 'details' },
+    { id: 'estDur', label: 'Est. Dur.', visible: false, width: '100px', category: 'status' },
+    { id: 'estComp', label: 'Est. Comp.', visible: false, width: '120px', category: 'status' },
+    { id: 'lastCheckIn', label: 'Last Check In', visible: false, width: '150px', category: 'status' },
+    { id: 'lastLogMessage', label: 'Last Log Message', visible: false, width: '250px', category: 'details' },
+    { id: 'alerts', label: 'Alerts', visible: false, width: '200px', category: 'status' },
     { id: 'notes', label: 'Notes', visible: false, width: '200px', category: 'details' }
   ]);
 
